@@ -3,20 +3,22 @@
 # Simple script to readd my packages to cblrepo.db
 #
 
-mypackages=(
-	smallcheck,1.1.1
-    lazysmallcheck,0.6
-	logict,0.6.0.2
-	hood,0.2
-)
-pkgs=${mypackages[@]}
-pkgnames=smallcheck lazysmallcheck logict hood
+pkgs="smallcheck,1.1.1
+      lazysmallcheck,0.6
+      logict,0.6.0.2
+      hood,0.2"
+pkgnames="smallcheck
+          lazysmallcheck
+		  logict
+		  hood"
 
 echo "Avaliable versions:"
 cblrepo versions logict
 cblrepo versions smallcheck
 cblrepo versions lazysmallcheck
-echo "Adding versions: $pkgs"
+echo -n "Adding versions:"
+for pkg in $pkgs; do echo -n " $pkg"; done
+echo
 cblrepo add $pkgs
 echo
 echo "You may need to do some bumping."
