@@ -7,8 +7,10 @@ mypackages=(
 	smallcheck,1.1.1
     lazysmallcheck,0.6
 	logict,0.6.0.2
+	hood,0.2
 )
 pkgs=${mypackages[@]}
+pkgnames=smallcheck lazysmallcheck logict hood
 
 echo "Avaliable versions:"
 cblrepo versions logict
@@ -21,5 +23,8 @@ echo "You may need to do some bumping."
 echo "If you haven't had to uninstall them, bump to the latest value"
 echo "If you had to uninstall them or unsure, bump to one more"
 echo
-echo To bump: cblrepo bump --inclusive $pkgs
+echo To bump: cblrepo bump --inclusive $pkgnames
+echo
+echo "Afterwards, please remember to use the current ghc"
+echo cblrepo pkgbuild --ghc-version 7.8.2 --ghc-release 1 $pkgnames
 
