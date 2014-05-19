@@ -6,16 +6,16 @@
 pkgs="smallcheck,1.1.1
       lazysmallcheck,0.6
       logict,0.6.0.2
-      hood,0.2"
+      hood,0.2
+      tasty-smallcheck,0.8"
 pkgnames="smallcheck
           lazysmallcheck
-		  logict
-		  hood"
+    	  logict
+    	  hood
+          tasty-smallcheck"
 
 echo "Avaliable versions:"
-cblrepo versions logict
-cblrepo versions smallcheck
-cblrepo versions lazysmallcheck
+for pkg in $pkgnames; do cblrepo versions $pkg; done
 echo -n "Adding versions:"
 for pkg in $pkgs; do echo -n " $pkg"; done
 echo
