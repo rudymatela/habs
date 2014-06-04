@@ -7,12 +7,16 @@ pkgs="smallcheck,1.1.1
       lazysmallcheck,0.6
       logict,0.6.0.2
       hood,0.2
-      tasty-smallcheck,0.8"
+      tasty-smallcheck,0.8
+      quickspec,0.9.2
+      spoon,0.3.1"
 pkgnames="smallcheck
           lazysmallcheck
     	  logict
     	  hood
-          tasty-smallcheck"
+          tasty-smallcheck
+          quickspec
+          spoon"
 
 echo "Avaliable versions:"
 for pkg in $pkgnames; do cblrepo versions $pkg; done
