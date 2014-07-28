@@ -8,7 +8,7 @@ pkgs="smallcheck,1.1.1
       logict,0.6.0.2
       hood,0.2
       tasty-smallcheck,0.8
-      quickspec,0.9.4
+      quickspec,0.9.5
       spoon,0.3.1
       tagshare,0.0
       testing-feat,0.4.0.2"
@@ -35,6 +35,8 @@ echo "If you had to uninstall them or unsure, bump to one more"
 echo
 echo To bump: cblrepo bump --inclusive $pkgnames
 echo
+echo "As of 2014-07-28, I'm on 6 on all packages (5 bumps)."
+echo
 echo "Afterwards, please remember to use the current ghc"
-echo cblrepo pkgbuild --ghc-version 7.8.2 --ghc-release 1 $pkgnames
+echo cblrepo pkgbuild --ghc-version 7.8.3 --ghc-release 1 $pkgnames
 
